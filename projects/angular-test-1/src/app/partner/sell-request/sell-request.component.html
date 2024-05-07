@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="d-flex mt-3 justify-content-between">
+    <h1>ใบเสนอขายมือถือ</h1>
+    <button type="submit" class="btn btn-primary me-3 hbtn" (click)="router.navigate(['home/'],{relativeTo:null})">กลับสู่หน้าหลัก</button>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
+    <div class="form-group">
+      <label for="name">ชื่อ-สกุล ผู้ขาย</label>
+      <input type="text" class="form-control" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="tel">เบอร์โทรติดต่อกลับ</label>
+      <input type="text" class="form-control" formControlName="tel">
+    </div>
+    <div class="form-group">
+      <label for="email">อีเมลล์</label>
+      <input type="text" class="form-control" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="brand">ยี่ห้อมือถือ</label>
+      <input type="text" class="form-control" formControlName="brand">
+    </div>
+    <div class="form-group">
+      <label for="model">รุ่นมือถือ</label>
+      <input type="text" class="form-control" formControlName="model">
+    </div>
+    <div class="form-group">
+      <label for="name">ราคาที่คาดหวัง</label>
+      <input type="number" class="form-control" formControlName="expect_price">
+    </div>
+
+    <div class="mb-3">
+      <label for="formFile" class="form-label">รูปภาพ</label>
+      <input class="form-control" type="file" id="formFile">
+    </div>
+    <button type="submit" class="btn btn-primary mt-3 ">ตกลง</button>
+
+  </form>
+</div>

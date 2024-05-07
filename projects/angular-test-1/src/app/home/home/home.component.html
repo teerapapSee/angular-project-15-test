@@ -1,0 +1,23 @@
+<div class="container main">
+  <div class="row">
+    <div class="col-12 m-3">
+      <h3>รายการมือถือที่น่าสนใจ</h3>
+    </div>
+    <div class="col-3 mt-3" *ngFor="let item of data; index as i">
+      <div class="card">
+        <div class="d-flex justify-content-center m-3">
+          <img src="assets/nokia_3310_(2017)_1.jpg" class="card-img-top" alt="..." style="width: 100px;">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <p class="card-text">{{item.expect_price}} บาท</p>
+          <a href="#" class="btn btn-primary">ซื้อเลย</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <button type="button" class="btn btn-info" (click)="router.navigate(['partner/sell-request'],{relativeTo:null})">ขายมือถือกับเรา</button>
+
+  </div>
+</div>
